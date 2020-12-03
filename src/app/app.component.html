@@ -1,34 +1,16 @@
-{{item}}
-<div class="center container mt-5 ">
-  <div class="row-justify-content-center">
+<div class="page">
 
-    <div class="h3 pt-3">The TO DO list</div>
+<div class="h3 Text">Total Amount:</div>
 
+    <div class="container">
 
+      <cards></cards>
 
-      <!-- Grid row -->
-      <div class="form-row align-items-center">
-        <!-- Grid column -->
-        <div class="col-auto">
-          <!-- Default input -->
-          <label class="sr-only" for="inlineFormInput">to do                                                             </label>
-          <input mdbInput type="text" class="form-control mb-2" id="inlineFormInput" placeholder="Add Your ToDo" [(ngModel)]="item">
-        </div>
-        <!-- Grid column -->
-    
-        <!-- Button -->
-        <div class="col-auto">
-          <button type="submit" mdbBtn color="primary" class="mt-0">Add</button>
-        </div>
-        
-      </div>
+    </div>
 
-      
-
-
-
-
-
-  </div>
+<div class="row justify-content-center mt-5">
+    <button type="button" mdbBtn color="dark" mdbWavesEffect (click)="openModal_income()">Income</button>
+    <button type="button" mdbBtn color="dark" mdbWavesEffect (click)="openModal_expense()">Expense</button>
+</div>
 
 </div>

@@ -7,10 +7,16 @@ import { AppComponent } from './app.component';
 
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule } from '@angular/forms';
+import { IncomeComponent } from './income/income.component';
+import { ExpenseComponent } from './expense/expense.component';
+import { HistoryCardsComponent } from './history-cards/history-cards.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    IncomeComponent,
+    ExpenseComponent,
+    HistoryCardsComponent
   ],
   imports: [
     BrowserModule,
@@ -18,6 +24,8 @@ import { FormsModule } from '@angular/forms';
     MDBBootstrapModule.forRoot(),
     FormsModule,
   ],
+  entryComponents: [ IncomeComponent, ExpenseComponent],
+
   providers: [],
   bootstrap: [AppComponent]
 })
