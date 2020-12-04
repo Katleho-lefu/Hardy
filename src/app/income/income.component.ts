@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MDBModalRef } from 'angular-bootstrap-md';
+import { CalculatorService } from '../calculator.service';
 
 @Component({
   selector: 'app-income',
@@ -7,12 +8,16 @@ import { MDBModalRef } from 'angular-bootstrap-md';
   styleUrls: ['./income.component.scss']
 })
 export class IncomeComponent implements OnInit {
-  input_reason="";
-  input_amount="";
-   
-  constructor(public modalRef: MDBModalRef) {}
+  reason: any ="";
+  total_amount: number = 5000
+  added_amount: number = 0;
 
+  constructor(public modalRef: MDBModalRef, public calculator: CalculatorService) {}
 
+Income(){
+    this.calculator.Income(this.total_amount, this.added_amount);
+    this.modalRef.hide();
+}
 
   ngOnInit(): void {
   }

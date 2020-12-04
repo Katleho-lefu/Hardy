@@ -11,6 +11,8 @@ import { IncomeComponent } from './income/income.component';
 export class AppComponent {
   modalRef: MDBModalRef;
 
+  total_amount: number = 5000
+
   constructor(private modalService: MDBModalService) {}
 
   openModal_income() {

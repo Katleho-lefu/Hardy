@@ -4,15 +4,15 @@
   
     <!-- Reason -->
     <h5>Enter Reason:</h5>
-    <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Reason">
+    <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Reason" [(ngModel)]="reason" [ngModelOptions]="{standalone: true}">
   
     <!-- Amount -->
     <h5>Enter Amount:</h5>
-    <input type="number" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Amount">
+    <input type="number" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Amount" [(ngModel)]="added_amount" [ngModelOptions]="{standalone: true}">
   
   
     <!-- Sign in button -->
-    <button mdbBtn block="true" class="my-4" type="submit">Done</button>
+    <button mdbBtn block="true" class="my-4" type="submit" (click)="Expense()">Done</button>
   
   
   </form>
