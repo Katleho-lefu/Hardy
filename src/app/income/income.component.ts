@@ -14,12 +14,22 @@ export class IncomeComponent implements OnInit {
 
   constructor(public modalRef: MDBModalRef, public calculator: CalculatorService) {}
 
+
 Income(){
+  if(this.reason && this.added_amount){
+
+    this.calculator.amount_entered = this.added_amount;
     this.calculator.Income(this.total_amount, this.added_amount);
+
+    this.calculator.addSalary(this.added_amount)
     this.modalRef.hide();
+  }
+
+  else{
+    alert("all fields are required");
+  }
 }
 
   ngOnInit(): void {
   }
-
 }

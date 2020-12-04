@@ -8,9 +8,9 @@ import { CalculatorService } from '../calculator.service';
   styleUrls: ['./expense.component.scss']
 })
 export class ExpenseComponent implements OnInit {
-  reason: any ="";
+  reason: any = "";
   total_amount: number = 5000
-  added_amount: number = 0.00;
+  added_amount: number = 0;
 
   constructor(public modalRef: MDBModalRef, public calculator: CalculatorService) {}
 

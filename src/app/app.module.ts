@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { IncomeComponent } from './income/income.component';
 import { ExpenseComponent } from './expense/expense.component';
 import { HistoryCardsComponent } from './history-cards/history-cards.component';
+import { CalculatorService } from './calculator.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { HistoryCardsComponent } from './history-cards/history-cards.component';
   ],
   entryComponents: [ IncomeComponent, ExpenseComponent],
 
-  providers: [],
+  providers: [CalculatorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

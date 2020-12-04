@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MDBModalRef, MDBModalService } from 'angular-bootstrap-md';
+import { CalculatorService } from './calculator.service';
 import { ExpenseComponent } from './expense/expense.component';
 import { IncomeComponent } from './income/income.component';
 
@@ -13,7 +14,7 @@ export class AppComponent {
 
   total_amount: number = 5000
 
-  constructor(private modalService: MDBModalService) {}
+  constructor(private modalService: MDBModalService,public calculator:CalculatorService) {}
 
   openModal_income() {
     this.modalRef = this.modalService.show(IncomeComponent)
