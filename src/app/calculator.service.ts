@@ -22,9 +22,8 @@ Total() {
 // method for the money coming in
 Income( added_amount){
 
-  const result=this.total+added_amount;
+  const result = this.total + added_amount;
   console.log(result);
-
 
 }
 
