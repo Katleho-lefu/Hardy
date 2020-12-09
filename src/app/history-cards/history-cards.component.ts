@@ -8,7 +8,6 @@ import { CalculatorService } from '../calculator.service';
 })
 export class HistoryCardsComponent implements OnInit {
 
-amount="500"
 
   constructor(public calculator:CalculatorService) { }
 

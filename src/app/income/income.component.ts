@@ -9,7 +9,7 @@ import { CalculatorService } from '../calculator.service';
 })
 export class IncomeComponent implements OnInit {
   reason: any ="";
-  total_amount: number = 5000
+  total_amount: number = 5000;
   added_amount: number = 0;
 
   constructor(public modalRef: MDBModalRef, public calculator: CalculatorService) {}
