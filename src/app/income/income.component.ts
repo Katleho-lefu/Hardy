@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MDBModalRef } from 'angular-bootstrap-md';
 import { CalculatorService } from '../calculator.service';
+import { Income } from '../income/income_interface';
 
 @Component({
   selector: 'app-income',
@@ -8,27 +9,37 @@ import { CalculatorService } from '../calculator.service';
   styleUrls: ['./income.component.scss']
 })
 export class IncomeComponent implements OnInit {
-  reason: any ="";
-  total_amount: number = 5000
-  added_amount: number = 0;
+
+incomes: Income = {
+
+  reason: "",
+  added_amount : 0
+}
+  
 
   constructor(public modalRef: MDBModalRef, public calculator: CalculatorService) {}
 
 
 Income(){
-  if(this.reason && this.added_amount){
+  if(this.incomes.reason && this.incomes.added_amount){
 
-    this.calculator.amount_entered = this.added_amount;
-    this.calculator.Income(this.total_amount, this.added_amount);
+    // console.log(this.incomes);
 
-    this.calculator.addSalary(this.added_amount)
+    localStorage.setItem('Incomes', JSON.stringify(this.incomes))
+
+    this.calculator.amount_entered = this.incomes.added_amount;
+    this.calculator.Income(this.incomes.added_amount);
+
+    this.calculator.addSalary(this.incomes.added_amount)
     this.modalRef.hide();
   }
 
   else{
     alert("all fields are required");
   }
+
 }
+
 
   ngOnInit(): void {
   }

@@ -1,14 +1,15 @@
 
-<form class="text-center border border-light p-5">
+<form class="text-center border border-light p-5 class">
     <p class="h4 mb-4">Income</p>
+
   
     <!-- Reason -->
     <h5>Enter Reason:</h5>
-    <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Reason" [(ngModel)]="reason" [ngModelOptions]="{standalone: true}">
+    <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="Reason" [(ngModel)]="incomes.reason" [ngModelOptions]="{standalone: true}">
   
     <!-- Amount -->
     <h5>Enter Amount:</h5>
-    <input type="number" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Amount" [(ngModel)]="added_amount" [ngModelOptions]="{standalone: true}">
+    <input type="number" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Amount" [(ngModel)]="incomes.added_amount" [ngModelOptions]="{standalone: true}">
   
   
     <!-- Sign in button -->

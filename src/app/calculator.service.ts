@@ -9,20 +9,29 @@ export class CalculatorService {
   total:any = 0;
   constructor() {}
 
-Income(total_amount, added_amount){
+    income = 200
+    expense = 400
 
-  const result=total_amount+added_amount;
-  // return result
+Total() {
+  let result = this.income + this.expense
+  // return result;
+  console.log(result)
+}
+
+
+// method for the money coming in
+Income( added_amount){
+
+  const result=this.total+added_amount;
   console.log(result);
 
 
 }
 
-
+// method for the money going out
 Expense(total_amount, withdrawal_amount){
 
   const result=total_amount-withdrawal_amount;
-  // return result
   this.total = total_amount;
     console.log(result);
 }
