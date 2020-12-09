@@ -12,7 +12,7 @@ import { IncomeComponent } from './income/income.component';
 export class AppComponent {
   modalRef: MDBModalRef;
 
-  total_amount: number = 5000
+  total_amount: number = 0;
 
   constructor(private modalService: MDBModalService,public calculator:CalculatorService) {}
 
