@@ -1,28 +1,39 @@
 import { Injectable } from '@angular/core';
+import { Income } from './income/income_interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CalculatorService {
 
+  incomes: Income = {
+
+    reason: "",
+    added_amount : 0
+  }
+
   amount_entered:any = 0;
   total:any = 0;
   constructor() {}
 
-    income = 200
-    expense = 400
+    // income = 200
+    // expense = 400
 
-Total() {
-  let result = this.income + this.expense
-  // return result;
-  console.log(result)
-}
+// Total() {
+//   let result = this.income + this.expense
+//   return result;
+//   console.log(result)
+// }
+
+
 
 
 // method for the money coming in
-Income( added_amount){
+Income(incomes){
 
-  const result = this.total + added_amount;
+  localStorage.setItem('Incomes', JSON.stringify(incomes));
+
+  const result = this.total + incomes;
   console.log(result);
 
 }

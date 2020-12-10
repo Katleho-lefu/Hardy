@@ -23,8 +23,8 @@ incomes: Income = {
 Income(){
   if(this.incomes.reason && this.incomes.added_amount){
 
+    this.calculator.Income(this.incomes)
 
-    localStorage.setItem('Incomes', JSON.stringify(this.incomes));
     let transacations_income = localStorage.getItem('Incomes')
     console.log(transacations_income);
 
