@@ -1,6 +1,6 @@
-<mdb-card class="class">
+<mdb-card *ngIf="test">
       <mdb-card-body>
-          Salary
+          <p>{{test.reason}}</p>
       </mdb-card-body>
-      <h5 class="ml-2">+R{{calculator.amount_entered}}</h5>
+      <h5 class="ml-2">+R{{test.added_amount}}</h5>
   </mdb-card>
