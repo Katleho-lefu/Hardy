@@ -17,10 +17,10 @@ export class AppComponent {
   constructor(private modalService: MDBModalService,public calculator:CalculatorService) {}
 
   openModal_income() {
-    this.modalRef = this.modalService.show(IncomeComponent)
+    this.modalRef = this.modalService.show(IncomeComponent);
   }
 
   openModal_expense() {
-    this.modalRef = this.modalService.show(ExpenseComponent)
+    this.modalRef = this.modalService.show(ExpenseComponent);
   }
 }
