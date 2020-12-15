@@ -6,7 +6,6 @@ import { Income } from './income/income_interface';
 })
 export class CalculatorService {
 
-  array = [];
   incomes: Income = {
 
     reason: "",
@@ -15,6 +14,7 @@ export class CalculatorService {
 
   amount_entered:any = 0;
   total:any = 1000;
+
   constructor() {}
 
     // income = 200
@@ -34,22 +34,21 @@ export class CalculatorService {
 // method for the money coming in
 Income(incomes){
 
-  this.array.push(this.incomes);
-
   localStorage.setItem('Incomes', JSON.stringify(incomes));
   const result = this.total + incomes.added_amount;
-  console.log(result);
-  this.get_array();
 }
 
+//bring back income transactions from local storage
 get_incomes(){
   let transacations_income = JSON.parse(localStorage.getItem('Incomes'));
   return transacations_income;
 }
 
+//pushing incomes from local storage to an array
 get_array(){
-  // return this.array;
-  console.log(this.array);
+  let array = [];
+  array.push(this.incomes);
+  return(array);
 }
 
 // method for the money going out

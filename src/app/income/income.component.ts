@@ -10,6 +10,7 @@ import { Income } from '../income/income_interface';
 })
 export class IncomeComponent implements OnInit {
 
+
 incomes: Income = {
 
   reason: "",
@@ -23,14 +24,15 @@ incomes: Income = {
 Income(){
   if(this.incomes.reason && this.incomes.added_amount){
 
-    this.calculator.Income(this.incomes)
-    this.calculator.addSalary(this.incomes.added_amount)
-    this.modalRef.hide();
 
+    this.calculator.Income(this.incomes);
+    this.calculator.addSalary(this.incomes.added_amount);
+    this.modalRef.hide();
   }
 
   else{
     alert(" all fields are required ");
+    // this.modalRef.hide();
   }
 
 }

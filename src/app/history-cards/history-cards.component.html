@@ -1,6 +1,6 @@
-<mdb-card *ngIf = "incomes">
+<mdb-card *ngFor = "let item of data">
       <mdb-card-body>
-          <p>{{incomes.reason}}</p>
+          <p>{{item.reason}}</p>
       </mdb-card-body>
-      <h5 class="ml-2">+R{{incomes.added_amount}}</h5>
+      <h5 class="ml-2">+R{{item.added_amount}}</h5>
   </mdb-card>

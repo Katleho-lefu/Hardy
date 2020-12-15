@@ -2,9 +2,8 @@ mdb-card{
     margin-top: 1%;
     height: 25%;
     width: 100%;
-
-    .class {
-        border-radius: 50px;
-    }
-
 }
+
+mdb-card:hover {
+    background-color: rgba(206, 180, 180, 0.411);
+  }
