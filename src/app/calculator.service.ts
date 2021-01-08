@@ -13,7 +13,7 @@ export class CalculatorService {
   }
 
   amount_entered:any = 0;
-  total:any = 1000;
+  total:any = 50000;
 
   constructor() {}
 
@@ -39,9 +39,12 @@ Income(incomes){
 }
 
 //bring back income transactions from local storage
-get_incomes(){
-  let transacations_income = JSON.parse(localStorage.getItem('Incomes'));
-  return transacations_income;
+get_incomes():any[]{
+  let Income:any[] =[];
+  let Incomes = JSON.parse(localStorage.getItem('Incomes'));
+  Income.push(Incomes)
+  console.log(Incomes);
+  return Income;
 }
 
 //pushing incomes from local storage to an array
@@ -53,13 +56,12 @@ get_array(){
 
 // method for the money going out
 Expense(total_amount, withdrawal_amount){
-  const result=total_amount-withdrawal_amount;
+  const result=total_amount - withdrawal_amount;
   this.total = total_amount;
 }
 
 
 addSalary(current__amount:any)
-
 {
   this.total = this.total + current__amount;
 }

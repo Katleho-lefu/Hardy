@@ -14,16 +14,18 @@ export class IncomeComponent implements OnInit {
 incomes: Income = {
 
   reason: "",
-  added_amount : 0
+  added_amount : null,
 }
+
+// arr_incomes: Income[] = []
   
 
   constructor(public modalRef: MDBModalRef, public calculator: CalculatorService) {}
 
 
 Income(){
+  // this.arr_incomes.push(this.incomes);
   if(this.incomes.reason && this.incomes.added_amount){
-
 
     this.calculator.Income(this.incomes);
     this.calculator.addSalary(this.incomes.added_amount);
