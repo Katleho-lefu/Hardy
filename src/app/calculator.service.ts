@@ -12,6 +12,8 @@ export class CalculatorService {
     added_amount : 0
   }
 
+  arr_incomes: Income[] = [this.incomes]
+
   amount_entered:any = 0;
   total:any = 50000;
 
@@ -31,20 +33,19 @@ export class CalculatorService {
 
 
 
-// method for the money coming in
-Income(incomes){
-
-  localStorage.setItem('Incomes', JSON.stringify(incomes));
-  const result = this.total + incomes.added_amount;
+//method for the money coming in
+Income(arr_incomes){
+  localStorage.setItem('Incomes', JSON.stringify(arr_incomes));
+  const result = this.total + arr_incomes.added_amount;
 }
 
 //bring back income transactions from local storage
 get_incomes():any[]{
-  let Income:any[] =[];
+  // let Income:any[] =[];
   let Incomes = JSON.parse(localStorage.getItem('Incomes'));
-  Income.push(Incomes)
-  console.log(Incomes);
-  return Income;
+  // Income.push(Incomes)
+  // console.log(this.arr_incomes);
+  return this.arr_incomes;
 }
 
 //pushing incomes from local storage to an array
@@ -54,7 +55,7 @@ get_array(){
   return(array);
 }
 
-// method for the money going out
+//method for the money going out
 Expense(total_amount, withdrawal_amount){
   const result=total_amount - withdrawal_amount;
   this.total = total_amount;
