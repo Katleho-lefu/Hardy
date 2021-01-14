@@ -42,7 +42,7 @@ Income(arr_incomes){
 //bring back income transactions from local storage
 get_incomes():any[]{
   // let Income:any[] =[];
-  let Incomes = JSON.parse(localStorage.getItem('Incomes'));
+  let arr_incomes = JSON.parse(localStorage.getItem('Incomes'));
   // Income.push(Incomes)
   // console.log(this.arr_incomes);
   return this.arr_incomes;

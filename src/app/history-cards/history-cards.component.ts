@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { CalculatorService } from '../calculator.service';
 
 @Component({
-  selector: 'cards',
+  selector: 'history-cards',
   templateUrl: './history-cards.component.html',
   styleUrls: ['./history-cards.component.scss']
 })
