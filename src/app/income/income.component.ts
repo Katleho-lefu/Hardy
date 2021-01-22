@@ -13,7 +13,7 @@ export class IncomeComponent implements OnInit {
 
 incomes: Income = {
 
-  reason: "",
+  description: "",
   added_amount : null,
 }
 
@@ -24,7 +24,7 @@ incomes: Income = {
 
 
 Income(){
-  if(this.incomes.reason && this.incomes.added_amount){
+  if(this.incomes.description && this.incomes.added_amount){
 
     this.calculator.Income(this.incomes);
     this.calculator.addSalary(this.incomes.added_amount);

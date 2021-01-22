@@ -1,18 +1,16 @@
 <div class="page">
 
-<div class="h3 Text">Total Amount: R {{calculator.total}}</div>
+
 
     <div class="container">
       <history-cards></history-cards>
     </div>
+
+
+<div class="h4 Text">Total: R {{calculator.total}}</div>
 
 <div class="row justify-content-center mt-5">
     <button type="button" mdbBtn  mdbWavesEffect (click)="openModal_income()">Income</button>
     <button type="button" mdbBtn  mdbWavesEffect (click)="openModal_expense()">Expense</button>
 </div>
 
-<div *ngFor= "let item of data">
-  <h3> The reason is {{item[1].reason}}</h3>
-  <h3> The amount is {{item[1].amount}}</h3>
-</div>
-</div>

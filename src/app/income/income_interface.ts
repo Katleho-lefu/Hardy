@@ -1,4 +1,4 @@
 export interface Income {
-    reason: string;
+    description: string;
     added_amount: number;
 }

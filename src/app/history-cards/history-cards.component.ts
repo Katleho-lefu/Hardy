@@ -16,14 +16,17 @@ export class HistoryCardsComponent implements OnInit {
   constructor(public calculator:CalculatorService) {
 
   // console.log(this.calculator.get_incomes());
-    this.all_incomes = this.calculator.get_incomes();
-     console.log(this.all_incomes);
+
   //  this.data = this.calculator.get_array();
   //  this.array.push(this.incomes);
   //  console.log(this.array);
   }
 
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    
+    this.all_incomes = this.calculator.get_incomes();
+    console.log(this.all_incomes);
+  }
 
 }
