@@ -11,4 +11,8 @@
     <button type="button" mdbBtn  mdbWavesEffect (click)="openModal_expense()">Expense</button>
 </div>
 
+<div *ngFor= "let item of data">
+  <h3> The reason is {{item[1].reason}}</h3>
+  <h3> The amount is {{item[1].amount}}</h3>
+</div>
 </div>

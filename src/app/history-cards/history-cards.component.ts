@@ -8,20 +8,20 @@ import { CalculatorService } from '../calculator.service';
   styleUrls: ['./history-cards.component.scss']
 })
 export class HistoryCardsComponent implements OnInit {
-  incomes: any[] = [];
-  data: any ;
 
+  // incomes: any[] 
+  data: any ;
+  all_incomes: any[] =[];
 
   constructor(public calculator:CalculatorService) {
 
-  //  console.log(this.calculator.get_incomes());
-   this.incomes= this.calculator.get_incomes();
-   console.log(this.incomes);
-  
+  // console.log(this.calculator.get_incomes());
+    this.all_incomes = this.calculator.get_incomes();
+     console.log(this.all_incomes);
   //  this.data = this.calculator.get_array();
   //  this.array.push(this.incomes);
   //  console.log(this.array);
-   }
+  }
 
 
   ngOnInit(): void {}

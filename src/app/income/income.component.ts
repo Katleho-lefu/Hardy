@@ -17,7 +17,7 @@ incomes: Income = {
   added_amount : null,
 }
 
-arr_incomes: Income[] = [this.incomes]
+
   
 
   constructor(public modalRef: MDBModalRef, public calculator: CalculatorService) {}
@@ -26,7 +26,7 @@ arr_incomes: Income[] = [this.incomes]
 Income(){
   if(this.incomes.reason && this.incomes.added_amount){
 
-    this.calculator.Income(this.arr_incomes);
+    this.calculator.Income(this.incomes);
     this.calculator.addSalary(this.incomes.added_amount);
     this.modalRef.hide();
   }

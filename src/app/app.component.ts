@@ -11,10 +11,13 @@ import { IncomeComponent } from './income/income.component';
 })
 export class AppComponent {
   modalRef: MDBModalRef;
-
   total_amount: number = 0;
 
-  constructor(private modalService: MDBModalService,public calculator:CalculatorService) {}
+  data:any[]=[];
+
+  constructor(private modalService: MDBModalService,public calculator:CalculatorService) {
+    this.data = this.calculator.get_incomes()
+  }
 
   openModal_income() {
     this.modalRef = this.modalService.show(IncomeComponent);

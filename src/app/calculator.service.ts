@@ -34,18 +34,18 @@ export class CalculatorService {
 
 
 //method for the money coming in
-Income(arr_incomes){
-  localStorage.setItem('Incomes', JSON.stringify(arr_incomes));
-  const result = this.total + arr_incomes.added_amount;
+Income(incomes){
+  localStorage.setItem('Incomes', JSON.stringify(incomes));
+  // const result = this.total + incomes.added_amount;
 }
 
 //bring back income transactions from local storage
 get_incomes():any[]{
-  // let Income:any[] =[];
-  let arr_incomes = JSON.parse(localStorage.getItem('Incomes'));
-  // Income.push(Incomes)
-  // console.log(this.arr_incomes);
-  return this.arr_incomes;
+  let Income:any[] =[];
+  
+  let incomes = JSON.parse(localStorage.getItem('Incomes'));
+  Income.push(incomes)
+  return Income;
 }
 
 //pushing incomes from local storage to an array
