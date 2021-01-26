@@ -13,15 +13,13 @@ export class HistoryCardsComponent implements OnInit {
   data: any ;
   all_incomes: any[] =[];
 
-  constructor(public calculator:CalculatorService) {
+  constructor(public calculator:CalculatorService) {}
 
-  // console.log(this.calculator.get_incomes());
 
-  //  this.data = this.calculator.get_array();
-  //  this.array.push(this.incomes);
-  //  console.log(this.array);
+  delete_item(i){
+    console.log(i);
+    this.calculator.delete_item(i)
   }
-
 
   ngOnInit(): void {
     

@@ -41,7 +41,7 @@ export class CalculatorService {
       // console.log(arrIncome);
       localStorage.setItem('Incomes', JSON.stringify(arrIncome));
     }
-    else {/**Bringing back the existing Incomes to add new incomes into them 
+    else {/**  Bringing back the existing Incomes to add new incomes into them 
              * assign the existing Incomes to an array**/
       let arrIncome: any[] = JSON.parse(localStorage.getItem('Incomes'));
       arrIncome.push(incomes);
@@ -67,6 +67,19 @@ export class CalculatorService {
 
   addSalary(current__amount: any) {
     this.total = this.total + current__amount;
+  }
+
+
+ delete_item(i){
+   console.log(i);
+  //  let Incomes = JSON.parse(localStorage.getItem('Incomes'));
+  //  for (var a = 0; a< Incomes.length; a++) {
+  //   var items = JSON.parse(Incomes[i]);
+ 
+  //   }
+
+
+
   }
 
 }

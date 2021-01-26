@@ -1,9 +1,18 @@
 mdb-card{
-    margin-top: 18%;
+    margin-top: 12%;
     height: 25%;
+    height: fixed;
     width: 100%;
 }
 
-mdb-card:hover {
-    background-color: rgba(206, 180, 180, 0.411);
-  }
+// mdb-card:hover {
+    
+//   }
+
+
+  .container{
+    height: 60vh;
+    width: 100vw;
+    background-color: rgba(212, 211, 211, 0.897);
+    position: fixed;
+  } 

@@ -1,6 +1,10 @@
-<mdb-card *ngFor = "let item of all_incomes">
-      <mdb-card-body>
-          <p>{{item.description}}</p>
-      </mdb-card-body>
-      <h5 class="ml-2">+R{{item.added_amount}}</h5>
-  </mdb-card>
+<div class="container mt-5">
+    <mdb-card *ngFor = "let item of all_incomes; let i = index">
+          <mdb-card-body>
+              <h5>{{item.description}}</h5>
+          </mdb-card-body>
+             <mdb-icon style="padding-left: 85%; vertical-align: middle; font-size: 1.5rem;"fas icon="trash" (click)="delete_item(i)"></mdb-icon>
+          <h5 class="ml-2" style="color: rgb(25, 170, 62);">+R{{item.added_amount}}</h5>
+      </mdb-card>
+</div>
+
