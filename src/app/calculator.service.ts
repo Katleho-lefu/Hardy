@@ -71,16 +71,29 @@ export class CalculatorService {
   }
 
 
- delete_item(i){
-   console.log(i);
-  //  let Incomes = JSON.parse(localStorage.getItem('Incomes'));
-  //  for (var a = 0; a< Incomes.length; a++) {
-  //   var items = JSON.parse(Incomes[i]);
- 
-  //   }
-
-
-
+  delete_item(id) {
+    let incomes= this.get_incomes()
+    for(var a= 0; a<incomes.length; a=+1){
+      const index = incomes.findIndex(id => incomes == id);
+      incomes.splice(id, 1);
+      localStorage.setItem('Incomes', JSON.stringify(incomes));
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   }
 
-}

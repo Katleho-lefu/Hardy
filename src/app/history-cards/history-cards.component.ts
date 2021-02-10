@@ -16,9 +16,8 @@ export class HistoryCardsComponent implements OnInit {
   constructor(public calculator:CalculatorService) {}
 
 
-  delete_item(i){
-    console.log(i);
-    this.calculator.delete_item(i)
+  delete_item(id){
+    this.calculator.delete_item(id)
   }
 
   ngOnInit(): void {
