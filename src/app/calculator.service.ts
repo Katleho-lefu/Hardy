@@ -41,6 +41,7 @@ export class CalculatorService {
       // console.log(arrIncome);
       localStorage.setItem('Incomes', JSON.stringify(arrIncome));
     }
+    
     else {/**  Bringing back the existing Incomes to add new incomes into them 
              * assign the existing Incomes to an array**/
       let arrIncome: any[] = JSON.parse(localStorage.getItem('Incomes'));
