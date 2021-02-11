@@ -38,23 +38,22 @@ export class CalculatorService {
     if (localStorage.getItem('Incomes') == null) {
       let arrIncome: any[] = [];
       arrIncome.push(incomes)
-      // console.log(arrIncome);
       localStorage.setItem('Incomes', JSON.stringify(arrIncome));
     }
-    
-    else {/**  Bringing back the existing Incomes to add new incomes into them 
-             * assign the existing Incomes to an array**/
+    /* *  Bringing back the existing Incomes to add new incomes into them 
+       * assign the existing Incomes to an array **/
+    else {
       let arrIncome: any[] = JSON.parse(localStorage.getItem('Incomes'));
       arrIncome.push(incomes);
       localStorage.setItem('Incomes', JSON.stringify(arrIncome));
     }
   }
 
+
   //bring back income transactions from local storage
   get_incomes(): any[] {
-    // let Income: any[] = [];
     let incomes = JSON.parse(localStorage.getItem('Incomes'));
-    // Income.push(incomes)
+   // location.reload();
     return incomes;
   }
 
@@ -66,18 +65,14 @@ export class CalculatorService {
   }
 
 
-  addSalary(current__amount: any) {
-    this.total = this.total + current__amount;
-  }
-
-
+// Method to delete an item in localstorage
   delete_item(id) {
-    let incomes= this.get_incomes()
-    for(var a= 0; a<incomes.length; a=+1){
+    const incomes = this.get_incomes()
+    for(var a= 0; a<incomes.length; a++){
       const index = incomes.findIndex(id => incomes == id);
       incomes.splice(id, 1);
-      localStorage.setItem('Incomes', JSON.stringify(incomes));
     }
+    // localStorage.setItem('Incomes', JSON.stringify(incomes));
   }
   
   

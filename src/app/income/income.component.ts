@@ -11,32 +11,28 @@ import { Income } from '../income/income_interface';
 export class IncomeComponent implements OnInit {
 
 
-incomes: Income = {
+  incomes: Income = {
 
-  description: "",
-  added_amount : null,
-}
-
-
-  
-
-  constructor(public modalRef: MDBModalRef, public calculator: CalculatorService) {}
-
-
-Income(){
-  if(this.incomes.description && this.incomes.added_amount){
-
-    this.calculator.Income(this.incomes);
-    this.calculator.addSalary(this.incomes.added_amount);
-    this.modalRef.hide();
+    description: "",
+    added_amount: null,
   }
 
-  else{
-    alert(" all fields are required ");
-    // this.modalRef.hide();
-  }
 
-}
+
+
+  constructor(public modalRef: MDBModalRef, public calculator: CalculatorService) { }
+
+
+  Income() {
+    if (this.incomes.description && this.incomes.added_amount) {
+      this.calculator.Income(this.incomes);
+      this.modalRef.hide();
+    }
+    else {
+      alert(" all fields are required ");
+      // this.modalRef.hide();
+    }
+  }
 
   ngOnInit(): void {
   }

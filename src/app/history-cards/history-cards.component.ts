@@ -2,6 +2,7 @@ import { collectExternalReferences } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { CalculatorService } from '../calculator.service';
 
+
 @Component({
   selector: 'history-cards',
   templateUrl: './history-cards.component.html',
@@ -22,7 +23,7 @@ export class HistoryCardsComponent implements OnInit {
 
   ngOnInit(): void {
     
-    this.all_incomes = this.calculator.get_incomes();
+    this.all_incomes = this.calculator.get_incomes()
     console.log(this.all_incomes);
   }
 
