@@ -17,14 +17,15 @@ export class HistoryCardsComponent implements OnInit {
   constructor(public calculator:CalculatorService) {}
 
 
-  delete_item(id){
-    this.calculator.delete_item(id)
+   delete_item(id){
+    this.calculator.delete_item(id).then((data) => {
+      this.all_incomes = data;
+    })
   }
 
   ngOnInit(): void {
     
     this.all_incomes = this.calculator.get_incomes()
-    console.log(this.all_incomes);
   }
 
 }

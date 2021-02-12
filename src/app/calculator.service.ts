@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Income } from './income/income_interface';
 
 @Injectable({
@@ -66,22 +67,22 @@ export class CalculatorService {
 
 
 // Method to delete an item in localstorage
-  delete_item(id) {
-    const incomes = this.get_incomes()
-    for(var a= 0; a<incomes.length; a++){
-      const index = incomes.findIndex(id => incomes == id);
-      incomes.splice(id, 1);
-    }
-    // localStorage.setItem('Incomes', JSON.stringify(incomes));
+  async delete_item(id): Promise<any> {
+    return new Promise((resolve, reject) => {
+      const incomes: any[] = this.get_incomes()
+      for(var x= 0; x<incomes.length; x++){
+        const index = incomes.findIndex(id => incomes == id);
+        incomes.splice(id, 1);
+      }
+      localStorage.setItem('Incomes', JSON.stringify(incomes));
+      resolve(incomes)
+    }).catch(err => {
+      console.log(err.message);
+    })
+
+    
   }
-  
-  
-  
-  
-  
-  
-  
-  
+
   
   
   
