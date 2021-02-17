@@ -11,19 +11,25 @@ import { IncomeComponent } from './income/income.component';
 import { ExpenseComponent } from './expense/expense.component';
 import { HistoryCardsComponent } from './history-cards/history-cards.component';
 import { CalculatorService } from './calculator.service';
+import { LandingComponent } from './landing/landing.component';
+import { AppRoutingModule } from './app-routing/app-routing.module';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IncomeComponent,
     ExpenseComponent,
-    HistoryCardsComponent
+    HistoryCardsComponent,
+    LandingComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MDBBootstrapModule.forRoot(),
     FormsModule,
+    AppRoutingModule,
   ],
   entryComponents: [ IncomeComponent, ExpenseComponent],
 
